@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Login | BGL</title>
+  <link rel="icon" href="PGN.PNG">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body">
+  <div class="auth-shell">
+    <a class="back-link" href="index.html"> Back to school website</a>
+    <div class="auth-card">
+      <div class="brand auth-brand">
+        <div class="brand-mark"><img alt="" height="56" src="PGN.PNG" width="52"></div>
+        <div><strong>Biguli Secondary School</strong><span>Secure School Portal</span></div>
+      </div>
+      <h1 id="loginTitle">Staff access</h1>
+      <p class="muted" id="loginSubtitle">Teachers can enter marks only. Administrators can manage the whole system.</p>
+      <div class="demo-box">
+          <form id="loginForm">
+			  <label>Login as <select id="loginType" name="D1">
+			  <option value="staff">Administrator / Teacher</option>
+			  <option value="student">Student</option>
+			  </select> </label>
+			  <div id="staffLoginFields">
+				  <label>Email
+				  <input id="loginEmail" placeholder="staff@school.local" required="" type="email"> 
+				  Password
+				  <input id="loginPassword" placeholder="Enter password" required="" type="password">
+				  </label></div>
+			  <div id="studentLoginFields" class="hidden">
+				  <label>School ID Number
+				  <input id="studentId" placeholder="e.g. BSS0001"> Full Name
+				  <input id="studentName" placeholder="Enter your full name"> 
+				  Class <select id="studentClass" name="D2">
+				  <option>S1</option>
+				  <option>S2</option>
+				  <option>S3</option>
+				  <option>S4</option>
+				  <option>S5</option>
+				  <option>S6</option>
+				  </select> </label></div>
+			  <button class="btn btn-primary btn-full" type="submit">Sign In
+			  </button>
+			  <div id="loginMessage" class="message hidden">
+			  </div>
+		  </form> 
+  </div>
+  <script src="app.js"></script>
+  <script>window.Biguli.initLoginPage();</script>
+</body>
+</html>

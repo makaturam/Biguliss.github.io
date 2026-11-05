@@ -1,0 +1,22 @@
+BIGULI SECONDARY SCHOOL ROLE-BASED ACCESS NOTE
+
+Roles in this static prototype:
+1. ADMINISTRATOR
+   - Full access to all modules.
+   - Can register/edit students.
+   - Can add/edit teachers and assign subjects.
+   - Can view marks, reports, payments, attendance, inventory, timetable and welfare records.
+
+2. TEACHER
+   - Can access only Academic / Marks and Activities / AOI.
+   - Can enter marks for the full class sheet.
+   - Cannot access students management, finance, reports, attendance, inventory, timetable or discipline.
+
+3. STUDENT
+   - Logs in using School ID Number + Full Name + Class.
+   - Can access only My Payments and My Report.
+   - Can view only their own report.
+   - Can record/view only their own payments.
+
+IMPORTANT:
+This project is still a browser/localStorage prototype. The role restrictions are implemented in the front-end and are NOT sufficient for real security. Before deployment on the internet, move authentication, authorization, student records, marks and payments to a server/database with hashed passwords, secure sessions and server-side permission checks.

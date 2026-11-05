@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Portal |BGL</title>
+  <link rel="icon" href="PGN.PNG">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="portal-body">
+  <div id="toast" class="toast"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark"><img src="PGN.PNG" alt="Biguli Secondary School badge"></div>
+        <div><strong>Biguli</strong><span>Staff Portal</span></div>
+      </div>
+      <div class="user-mini">
+        <div class="avatar" id="sideAvatar">B</div>
+        <div><b id="sideName">Staff</b><span id="sideRole">Role</span></div>
+      </div>
+      <nav id="mainNav"></nav>
+      <button class="nav-item logout-btn" onclick="Biguli.logout()">↪ <span>Sign out</span></button>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+        <div>
+          <h1 id="pageTitle">Dashboard</h1>
+          <p id="pageSubtitle">School management overview</p>
+        </div>
+        <div class="top-user"><span id="serverStatus" class="server-status" role="status" aria-live="polite">Checking marks server…</span><span id="topName">Staff</span><span class="role-pill" id="topRole">STAFF</span></div>
+      </header>
+      <main class="content" id="content"></main>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <button class="modal-close" onclick="Biguli.closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <script>window.Biguli.initPortal();</script>
+</body>
+</html>
